@@ -20,7 +20,7 @@ const WorkoutLogs = () => {
 
   const fetchClients = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/trainers/clients/${trainerName}`);
+      const response = await axios.get(`https://gym-management-app-backend.onrender.com/api/trainers/clients/${trainerName}`);
       setClients(response.data);
     } catch (error) {
       console.error("Error fetching clients:", error);
@@ -29,7 +29,7 @@ const WorkoutLogs = () => {
 
   const fetchWorkouts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/workouts");
+      const response = await axios.get("https://gym-management-app-backend.onrender.com/api/workouts");
       setWorkouts(response.data);
     } catch (error) {
       console.error("Error fetching workouts:", error);
@@ -57,9 +57,9 @@ const WorkoutLogs = () => {
     e.preventDefault();
     try {
       if (editId) {
-        await axios.put(`http://localhost:5000/api/workouts/${editId}`, workout);
+        await axios.put(`https://gym-management-app-backend.onrender.com/api/workouts/${editId}`, workout);
       } else {
-        await axios.post("http://localhost:5000/api/workouts", workout);
+        await axios.post("https://gym-management-app-backend.onrender.com/api/workouts", workout);
       }
       fetchWorkouts();
       setWorkout({ client: "", date: "", workoutType: "", exercises: [{ name: "", sets: "", reps: "" }] });
@@ -76,7 +76,7 @@ const WorkoutLogs = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/workouts/${id}`);
+      await axios.delete(`https://gym-management-app-backend.onrender.com/api/workouts/${id}`);
       fetchWorkouts();
     } catch (error) {
       console.error("Error deleting workout:", error);
