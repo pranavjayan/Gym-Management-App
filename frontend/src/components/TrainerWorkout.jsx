@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const WORKOUTS_API = "http://localhost:5000/api/workouts"; // Update with your backend route
+const WORKOUTS_API = "https://gym-management-app-backend.onrender.com/api/workouts"; // Update with your backend route
 
 const TrainerWorkout = () => {
   const [workouts, setWorkouts] = useState([]);
