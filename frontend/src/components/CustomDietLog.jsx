@@ -19,7 +19,7 @@ const CustomDietLog = () => {
 
   const fetchClients = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/trainers/clients/${trainerName}`);
+      const response = await axios.get(`https://gym-management-app-backend.onrender.com/api/trainers/clients/${trainerName}`);
       setClients(response.data);
     } catch (error) {
       console.error("Error fetching clients:", error);
@@ -28,7 +28,7 @@ const CustomDietLog = () => {
 
   const fetchDietPlans = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/diets");
+      const response = await axios.get("https://gym-management-app-backend.onrender.com/api/diets");
       setDietPlans(response.data);
     } catch (error) {
       console.error("Error fetching diet plans:", error);
@@ -118,7 +118,7 @@ const CustomDietLog = () => {
                   <td className="p-2">{d.meals?.dinner || "Not Set"}</td>
                   <td className="p-2 flex justify-center space-x-2">
                     <button onClick={() => setEditId(d._id)} className="bg-blue-500 px-2 py-1 rounded">Edit</button>
-                    <button onClick={() => axios.delete(`http://localhost:5000/api/diets/${d._id}`).then(fetchDietPlans)} className="bg-red-500 px-2 py-1 rounded">Delete</button>
+                    <button onClick={() => axios.delete(`https://gym-management-app-backend.onrender.com/api/diets/${d._id}`).then(fetchDietPlans)} className="bg-red-500 px-2 py-1 rounded">Delete</button>
                   </td>
                 </tr>
               ))}
