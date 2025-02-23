@@ -47,7 +47,7 @@ const ProgressUpdate = ({ userId }) => {
     console.log("Form Data:", { userId, weight, description, photo }); // Debugging
 
     try {
-      const response = await axios.post("http://localhost:5000/api/progress", formData, {
+      const response = await axios.post("https://gym-management-app-backend.onrender.com/api/progress", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       console.log("Response from Backend:", response.data); // Debugging
