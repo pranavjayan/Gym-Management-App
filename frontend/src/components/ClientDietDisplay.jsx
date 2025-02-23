@@ -17,7 +17,7 @@ const DietPlans = () => {
   const fetchDietPlan = async () => {
     try {
       console.log(`Fetching diet plan for user ID: ${userId}`);
-      const response = await axios.get(`http://localhost:5000/api/diets/client/${userId}`);
+      const response = await axios.get(`https://gym-management-app-backend.onrender.com/api/diets/client/${userId}`);
       console.log("Fetched Diet Plan:", response.data);
       setDietPlan(response.data);
     } catch (error) {
