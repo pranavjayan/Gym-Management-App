@@ -12,7 +12,7 @@ const ProgressUpdate = ({ userId }) => {
   useEffect(() => {
     const fetchProgress = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/progress/${userId}`);
+        const response = await axios.get(`https://gym-management-app-backend.onrender.com/api/progress/${userId}`);
         console.log("Fetched Progress Data:", response.data); // Debugging
         setProgressPhotos(response.data);
       } catch (error) {
