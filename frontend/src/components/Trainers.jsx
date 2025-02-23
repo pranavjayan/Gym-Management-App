@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const TRAINERS_API = "http://localhost:5000/api/users/trainers";
-const DELETE_API = "http://localhost:5000/api/users";
+const TRAINERS_API = "https://gym-management-app-backend.onrender.com/api/users/trainers";
+const DELETE_API = "https://gym-management-app-backend.onrender.com/api/users";
 
 const Trainers = () => {
   const [trainers, setTrainers] = useState([]);
