@@ -106,7 +106,7 @@ const ProgressUpdate = ({ userId }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {progressPhotos.map((progress) => (
             <div key={progress._id} className="bg-gray-800 p-4 rounded-lg shadow-lg">
-              <img src={`http://localhost:5000/${progress.photo}`} alt="Progress" className="w-full h-48 object-cover rounded-lg mb-4" />
+              <img src={`https://gym-management-app-backend.onrender.com/${progress.photo}`} alt="Progress" className="w-full h-48 object-cover rounded-lg mb-4" />
               <div className="text-center">
                 <p className="text-gray-300 font-semibold">Weight: {progress.weight} kg</p>
                 <p className="text-gray-400 text-sm">Date: {new Date(progress.date).toLocaleDateString()}</p>
