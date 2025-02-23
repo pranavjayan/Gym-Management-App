@@ -17,7 +17,7 @@ const TrainerClients = () => {
     const fetchClients = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/trainers/clients/${trainerName}`
+          `https://gym-management-app-backend.onrender.com/api/trainers/clients/${trainerName}`
         );
         setClients(response.data);
       } catch (error) {
