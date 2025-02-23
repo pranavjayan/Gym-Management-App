@@ -10,7 +10,7 @@ const ClientClass = () => {
 
   const fetchClasses = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/classes");
+      const response = await fetch("https://gym-management-app-backend.onrender.com/api/classes");
       const data = await response.json();
       setClasses(data);
       setLoading(false);
