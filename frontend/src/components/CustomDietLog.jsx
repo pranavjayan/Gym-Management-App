@@ -49,9 +49,9 @@ const CustomDietLog = () => {
     e.preventDefault();
     try {
       if (editId) {
-        await axios.put(`http://localhost:5000/api/diets/${editId}`, diet);
+        await axios.put(`https://gym-management-app-backend.onrender.com/api/diets/${editId}`, diet);
       } else {
-        await axios.post("http://localhost:5000/api/diets", diet);
+        await axios.post("https://gym-management-app-backend.onrender.com/api/diets", diet);
       }
       fetchDietPlans();
       setDiet({ client: "", meals: { breakfast: "", lunch: "", snack: "", dinner: "" } });
