@@ -14,7 +14,7 @@ const ClientWorkoutDisplay = () => {
   const fetchClientWorkouts = async () => {
     try {
       console.log(`Fetching workouts for client ID: ${user._id}`);
-      const response = await axios.get(`http://localhost:5000/api/workouts/client/${user._id}`);
+      const response = await axios.get(`https://gym-management-app-backend.onrender.com/api/workouts/client/${user._id}`);
       console.log("Fetched Workouts:", response.data);
       setWorkouts(response.data);
     } catch (error) {
