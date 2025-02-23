@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const USERS_API = "http://localhost:5000/api/users";
-const TRAINERS_API = "http://localhost:5000/api/users/trainers";
+const USERS_API = "https://gym-management-app-backend.onrender.com/api/users";
+const TRAINERS_API = "https://gym-management-app-backend.onrender.com/api/users/trainers";
 
 const MemberManagement = () => {
   const [users, setUsers] = useState([]);
